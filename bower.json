@@ -1,0 +1,6 @@
+{
+  "name": "we_can",
+  "dependencies": {
+    "bootstrap": "~3.3.1"
+  }
+}

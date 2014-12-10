@@ -1,0 +1,19 @@
+{
+  "name": "we_can",
+  "version": "0.0.1",
+  "description": "nuovo sito del gruppo",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sonictosca/we_can.git"
+  },
+  "author": "Riccardo Sartori",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sonictosca/we_can/issues"
+  },
+  "homepage": "https://github.com/sonictosca/we_can"
+}

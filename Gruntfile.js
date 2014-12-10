@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       },
       js_frontend: {
         src: [
-          './bower_components/jquery/jquery.js',
+          './bower_components/jquery/dist/jquery.js',
           './bower_components/bootstrap/dist/js/bootstrap.js',
           './app/assets/javascript/frontend.js'
         ],
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
       },
       js_backend: {
         src: [
-        './bower_components/jquery/jquery.js',
+        './bower_components/jquery/dist/jquery.js',
         './bower_components/bootstrap/dist/js/bootstrap.js',
         './app/assets/javascript/backend.js'
         ],

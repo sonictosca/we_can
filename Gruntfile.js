@@ -1,6 +1,27 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
+    connect: {
+      all: {
+        options: {
+          port: 9000,
+          hostname: "localhost", // usare 0.0.0.0 per renderlo accessibilia anche dall'esterno
+          /*
+          middleware: function(connect, options) {
+            return [
+              require('grunt-contrib-livereload/lib/utils').livereloadSnippet,
+              connect.static(options.base)
+            ];
+          }
+          */
+        }
+      }
+    },
+    open: {
+      all: {
+        path: 'http://localhost:<%= connect.all.options.port %>/public'
+      }
+    },
     concat: {
       options: {
         separator: ';',
@@ -57,7 +78,7 @@ module.exports = function(grunt) {
         ],
         tasks: ['concat:js_frontend', 'uglify:frontend'],
         options: {
-          livereload: true
+          livereload: 35729
         }
       },
       js_backend: {
@@ -68,30 +89,35 @@ module.exports = function(grunt) {
         ],
         tasks: ['concat:js_backend', 'uglify:backend'],
         options: {
-          livereload: true
+          livereload: 35729
         }
       },
       less: {
         files: ['./app/assets/stylesheets/*.less'],
         tasks: ['less'],
         options: {
-          livereload: true
+          livereload: 35729
         }
       },
       html: {
         files: ['./public/*.html'],
         options: {
-          livereload: true
+          livereload: 35729
         }
       }
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-open');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', [
+    'connect',
+    'open',
+    'watch']);
 
 }

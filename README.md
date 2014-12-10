@@ -1,4 +1,4 @@
 Nuovo sito del gruppo
 
 
-Ricordarsi di eseguire bower install
+Ricordarsi di eseguire npm install e bower install

@@ -6,14 +6,6 @@ module.exports = function(grunt) {
         options: {
           port: 9000,
           hostname: "localhost", // usare 0.0.0.0 per renderlo accessibilia anche dall'esterno
-          /*
-          middleware: function(connect, options) {
-            return [
-              require('grunt-contrib-livereload/lib/utils').livereloadSnippet,
-              connect.static(options.base)
-            ];
-          }
-          */
         }
       }
     },

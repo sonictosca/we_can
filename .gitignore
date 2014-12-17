@@ -2,3 +2,4 @@ bower_components/
 node_modules/
 public/assets/javascript/*.js
 public/assets/stylesheets/*.css
+public/assets/fonts/*

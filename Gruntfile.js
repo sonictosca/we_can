@@ -61,6 +61,13 @@ module.exports = function(grunt) {
         }
       },
     },
+    copy: {
+      main: {
+        files: [
+          {expand: true, flatten: true, src: ['./bower_components/bootstrap/fonts/*'], dest: './public/assets/fonts/', filter: 'isFile'},
+        ],
+      },
+    },
     watch: {
       js_frontend: {
         files: [
@@ -86,7 +93,7 @@ module.exports = function(grunt) {
       },
       less: {
         files: ['./app/assets/stylesheets/*.less'],
-        tasks: ['less'],
+        tasks: ['less', 'copy'],
         options: {
           livereload: 35729
         }
@@ -106,6 +113,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.registerTask('default', [
     'connect',

@@ -9,4 +9,10 @@
     )
     document.querySelector('head').appendChild(msViewportStyle);
   }
+
+  WebFont.load({
+    google: {
+      families: ['PT Sans', 'Droid Serif']
+    }
+  });
 })();

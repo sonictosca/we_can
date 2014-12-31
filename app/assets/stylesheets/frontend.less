@@ -33,6 +33,11 @@ body {
 
   @media (max-width: @screen-sm-max) {
     background: #191919 url('../img/intro_bg_sm.jpg') center center no-repeat;
+    .welcome-message {
+      .img-responsive {
+        max-width: 38%;
+      }
+    }
   }
 
   @media (min-width: @screen-sm-min) {
@@ -45,6 +50,9 @@ body {
       bottom: auto;
       strong {
         display: block;
+      }
+      .img-responsive {
+        max-width: 70%;
       }
     }
   }

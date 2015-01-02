@@ -70,6 +70,10 @@ body {
   }
 }
 
+.navbar .nav {
+  font-family: @font-family-serif;
+}
+
 .navbar-brand {
   float: left;
   padding: 12px 30px 0 15px;
@@ -84,6 +88,20 @@ body {
   }
 }
 
-.top-nav-collapse {
-  background-color: #f8f8f8;
+@media(min-width: @grid-float-breakpoint) {
+
+  #bar-logo {
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+  }
+
+  .navbar {
+    //padding: 20px 0;
+    border-bottom: 0;
+    letter-spacing: 1px;
+    -webkit-transition: background .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out;
+    transition: background .5s ease-in-out;
+  }
 }

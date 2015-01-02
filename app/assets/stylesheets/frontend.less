@@ -9,6 +9,10 @@ body {
   //text-align: center;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 #welcome {
   height: 300px;
   background-color: #191919;
@@ -103,5 +107,27 @@ body {
     -webkit-transition: background .5s ease-in-out;
     -moz-transition: background .5s ease-in-out;
     transition: background .5s ease-in-out;
+  }
+}
+
+.vertical-align {
+  display: flex;
+  align-items: center;
+}
+
+#footer {
+  background: @col_logo_blue;
+  color: white;
+
+  a:link {
+    color: @col_magenta;
+  }
+
+  a:visited {
+    color: @col_dark_magenta;
+  }
+
+  a:hover {
+    color: @col_dark_magenta;
   }
 }

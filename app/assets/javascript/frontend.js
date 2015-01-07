@@ -29,4 +29,10 @@
       families: ['Droid Sans', 'Droid Serif']
     }
   });
+
+  var app = angular.module('weCan', []);
+
+  app.controller('ContattoController', function() {
+    this.messaggio = {};
+  });
 })();

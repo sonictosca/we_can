@@ -23,6 +23,7 @@ module.exports = function(grunt) {
           './bower_components/jquery/dist/jquery.js',
           './bower_components/bootstrap/dist/js/bootstrap.js',
           './bower_components/components-webfontloader/webfont.js',
+          './bower_components/angular/angular.js',
           './app/assets/javascript/frontend.js'
         ],
         dest: './public/assets/javascript/frontend.js',
@@ -32,6 +33,7 @@ module.exports = function(grunt) {
         './bower_components/jquery/dist/jquery.js',
         './bower_components/bootstrap/dist/js/bootstrap.js',
         './bower_components/components-webfontloader/webfont.js',
+        './bower_components/angular/angular.js',
         './app/assets/javascript/backend.js'
         ],
         dest: './public/assets/javascript/backend.js',

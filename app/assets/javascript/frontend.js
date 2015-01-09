@@ -32,7 +32,20 @@
 
   var app = angular.module('weCan', []);
 
-  app.controller('ContattoController', function() {
-    this.messaggio = {};
+  app.directive('contattoForm', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'contatto-form.html',
+      controller: ['$scope', '$log', function($scope, $log) {
+        this.messaggio = {};
+
+        this.sendMessage = function() {
+          $log.log(this.messaggio);
+          this.messaggio = {};
+          $scope.contattoForm.$setPristine();
+        };
+      }],
+      controllerAs: 'contattoCtrl'
+    };
   });
 })();

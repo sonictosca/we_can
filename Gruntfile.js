@@ -52,7 +52,7 @@ module.exports = function(grunt) {
     },
     uglify: {
       options: {
-        mangle: false //manteniamo i nomi delle funzioni e delle variabili
+        mangle: false //manteniamo i nomi delle funzioni e delle variabili utile per debug passare a true in produzione
       },
       frontend: {
         files: {

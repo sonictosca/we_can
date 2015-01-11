@@ -36,10 +36,17 @@
     return {
       restrict: 'E',
       templateUrl: 'contatto-form.html',
-      controller: ['$scope', '$log', function($scope, $log) {
+      controller: ['$scope', '$log', '$http', function($scope, $log, $http) {
         this.messaggio = {};
 
         this.sendMessage = function() {
+          $http.post('http://localhost:8000/api/messaggio', this.messaggio).
+            success(function(data, status, headers, config) {
+              $log.log('La risposta ricevuta è ' + data);
+            }).
+            error(function(data, status, headers, config) {
+              $log.log('No buono')
+            });
           $log.log(this.messaggio);
           this.messaggio = {};
           $scope.contattoForm.$setPristine();

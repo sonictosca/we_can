@@ -38,14 +38,21 @@
       templateUrl: 'contatto-form.html',
       controller: ['$scope', '$log', '$http', function($scope, $log, $http) {
         this.messaggio = {};
+        this.successo = false;
+        this.failure = false;
+        var that = this;
 
         this.sendMessage = function() {
+          that.successo = false;
+          that.failure = false;
           $http.post('http://localhost:8000/api/messaggio', this.messaggio).
             success(function(data, status, headers, config) {
               $log.log('La risposta ricevuta è ' + data);
+              that.successo = true;
             }).
             error(function(data, status, headers, config) {
               $log.log('No buono')
+              that.failure = true;
             });
           $log.log(this.messaggio);
           this.messaggio = {};

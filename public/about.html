@@ -13,7 +13,7 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body>
+<body ng-app="weCan">
   <header role="banner">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
@@ -38,29 +38,70 @@
     </nav>
   </header>
 
-  <div class="container">
-    <div class="starter-template">
-      <h1>Chi Siamo</h1>
-      <h2>"siamo una realtà con un'ampia offerta di servizi avanzati di comunicazione, soluzioni informatiche, tecnologie e office."</h2>
-      <p class="lead">
-        We Can Group è una web agency innovativa in costante evoluzione che nasce dall'idea di sviluppare e sperimentare nuovi modi per
-        impiegare al meglio le tecnologie e le potenzialità di internet, anticipandone direzioni e tendenze.
-      </p>
-      <p class="lead">
-        Abbiamo competenze consolidate nell'erogazione di servizi di consulenza e di comunicazione, dalla definizione dell'identità visiva,
-        alla progettazione di web site fino alla realizzazione di qualsiasi attività di web marketing (SEM & SEO),
-        dall'advertising interattivo al Viral e Social Media Marketing.
-      </p>
-      <p class="lead">
-        Il nostro Team ha una preparazione ed esperienza, consolidata in molti anni, al servizio dei clienti per tutti i settori delle
-        sofisticate e più innovative tecnologie software e hardware d'avanguardia.
-      </p>
-      <p class="lead">
-        L'amore per il lavoro che facciamo, la seria e corretta professionalità, l'entusiasmo, lo spirito innovativo e il rapido adeguamento
-        agli sviluppi del mercato sono i componenti che hanno dato vita alla nostra filosofia, al nostro marchio: "WE CAN GROUP".
-      </p>
+  <section id="description">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="starter-template">
+            <h1>Chi Siamo</h1>
+            <h2>"siamo una realtà con un'ampia offerta di servizi avanzati di comunicazione, soluzioni informatiche, tecnologie e office."</h2>
+            <p class="lead">
+              We Can Group è una web agency innovativa in costante evoluzione che nasce dall'idea di sviluppare e sperimentare nuovi modi per
+              impiegare al meglio le tecnologie e le potenzialità di internet, anticipandone direzioni e tendenze.
+            </p>
+            <p class="lead">
+              Abbiamo competenze consolidate nell'erogazione di servizi di consulenza e di comunicazione, dalla definizione dell'identità visiva,
+              alla progettazione di web site fino alla realizzazione di qualsiasi attività di web marketing (SEM & SEO),
+              dall'advertising interattivo al Viral e Social Media Marketing.
+            </p>
+            <p class="lead">
+              Il nostro Team ha una preparazione ed esperienza, consolidata in molti anni, al servizio dei clienti per tutti i settori delle
+              sofisticate e più innovative tecnologie software e hardware d'avanguardia.
+            </p>
+            <p class="lead">
+              L'amore per il lavoro che facciamo, la seria e corretta professionalità, l'entusiasmo, lo spirito innovativo e il rapido adeguamento
+              agli sviluppi del mercato sono i componenti che hanno dato vita alla nostra filosofia, al nostro marchio: "WE CAN GROUP".
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <br />
+          <contatto-form></contatto-form>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section id="footer">
+    <div class="container">
+      <div class="row vertical-align">
+        <div class="col-md-6 col-xs-6">
+          <h3>We Can Group snc</h3>
+          <p>di Cappellini Stefano e Sartori Riccardo</p>
+          <br />
+          <p>
+            Via S. Ambrogio, 81<br />
+            22066 Mariano Comense (Co)<br />
+            P.IVA: 03373510134<br />
+          </p>
+          <br />
+          <p>
+            T. +39 031.744823 - F. +39 031.5472135
+          </p>
+          <br />
+          <p>
+            Email: <a href="mailto:info@wecangroup.it">info@wecangroup.it</a>
+          </p>
+        </div>
+        <div class="col-md-6 col-xs-6">
+          <a href="http://www.linkedin.com/company/we-can-group-snc?trk=hb_tab_compy_id_2778986"><i class="fa fa-linkedin-square fa-4x"></i></a>
+          <a href="http://twitter.com/wecangroup_it"><i class="fa fa-twitter-square fa-4x"></i></a>
+          <a href="https://www.facebook.com/wecangroup.it"><i class="fa fa-facebook-square fa-4x"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <script src="assets/javascript/frontend.js"></script>
   <script src="//localhost:35729/livereload.js"></script>
 </body>

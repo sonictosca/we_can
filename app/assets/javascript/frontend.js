@@ -62,4 +62,10 @@
       controllerAs: 'contattoCtrl'
     };
   });
+
+  app.controller('NewsController', ['$log', '$http', function($log, $http) {
+    this.sendMessage = function() {
+      $log.log(this.contenuto);
+    };
+  }]);
 })();

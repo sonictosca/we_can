@@ -22,7 +22,6 @@ module.exports = function(grunt) {
         src: [
           './bower_components/jquery/dist/jquery.js',
           './bower_components/bootstrap/dist/js/bootstrap.js',
-          './bower_components/bootstrap-fileinput/js/fileinput.js',
           './bower_components/components-webfontloader/webfont.js',
           './bower_components/angular/angular.js',
           './app/assets/javascript/frontend.js'
@@ -33,7 +32,6 @@ module.exports = function(grunt) {
         src: [
         './bower_components/jquery/dist/jquery.js',
         './bower_components/bootstrap/dist/js/bootstrap.js',
-        './bower_components/bootstrap-fileinput/js/fileinput.js',
         './bower_components/components-webfontloader/webfont.js',
         './bower_components/angular/angular.js',
         './app/assets/javascript/backend.js'
@@ -72,7 +70,6 @@ module.exports = function(grunt) {
         files: [
           {expand: true, flatten: true, src: ['./bower_components/bootstrap/fonts/*',
             './bower_components/components-font-awesome/fonts/*'], dest: './public/assets/fonts/', filter: 'isFile'},
-          {expand: true, flatten: true, src: ['./bower_components/bootstrap-fileinput/img/*'], dest: './public/img/', filter: 'isFile'},
         ],
       },
     },

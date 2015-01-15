@@ -41,7 +41,7 @@
               </div>
               <div class="form-group">
                 <label for="immagine">Carica un'immagine</label>
-                <input ng-model="newsCtrl.contenuto.immagine" id="immagine" type="file">
+                <input type="file" ng-file-select ng-multiple="false" accept="image/*" ng-model="newsCtrl.contenuto.immagine" id="immagine">
               </div>
               <button type="submit" class="btn btn-default">Invia</button>
             </form>

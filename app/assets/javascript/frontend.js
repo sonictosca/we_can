@@ -30,7 +30,7 @@
     }
   });
 
-  var app = angular.module('weCan', []);
+  var app = angular.module('weCan', ['angularFileUpload']);
 
   app.directive('contattoForm', function() {
     return {
@@ -63,9 +63,10 @@
     };
   });
 
-  app.controller('NewsController', ['$log', '$http', function($log, $http) {
+  app.controller('NewsController', ['$scope', '$log', '$http', function($scope, $log, $http) {
     this.sendMessage = function() {
       $log.log(this.contenuto);
     };
   }]);
+
 })();

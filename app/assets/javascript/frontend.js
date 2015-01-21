@@ -30,7 +30,12 @@
     }
   });
 
-  var app = angular.module('weCan', ['angularFileUpload']);
+  var app = angular.module('weCan', ['ui.bootstrap', 'angularFileUpload']);
+
+  app.config(function(datepickerPopupConfig) {
+    datepickerPopupConfig.currentText = 'Oggi';
+    datepickerPopupConfig.clearText = 'Elimina';
+  });
 
   app.directive('contattoForm', function() {
     return {
@@ -51,7 +56,7 @@
               that.successo = true;
             }).
             error(function(data, status, headers, config) {
-              $log.log('No buono')
+              $log.log('No buono');
               that.failure = true;
             });
           $log.log(this.messaggio);
@@ -63,9 +68,28 @@
     };
   });
 
-  app.controller('NewsController', ['$scope', '$log', '$http', function($scope, $log, $http) {
+  app.controller('NewsController', ['$scope', '$log', '$upload', function($scope, $log, $upload) {
+
+    $scope.open = function($event) {
+      $event.preventDefault();
+      $event.stopPropagation();
+
+      $scope.opened = true;
+    }
+
     this.sendMessage = function() {
       $log.log(this.contenuto);
+      var file = $scope.newsCtrl.contenuto.immagine[0];
+      $scope.upload = $upload.upload({
+        url: 'http://localhost:8000/news',
+        method: 'POST',
+        data: {contenuto: $scope.newsCtrl.contenuto},
+        file: file
+      }).progress(function(evt) {
+        console.log('progress: ' + parseInt(100.0 * evt.loaded / evt.total) + '% file : ' + evt.config.file.name);
+      }).success(function(data, status, headers, config) {
+        console.log('file ' + config.file.name + ' is uploaded sucessfully. Response: ' + data);
+      });
     };
   }]);
 

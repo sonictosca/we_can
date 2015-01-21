@@ -35,6 +35,20 @@
                 <label for="luogo">Luogo</label>
                 <input ng-model="newsCtrl.contenuto.luogo" type="text" class="form-control" id="Luogo" placeholder="Inserici il luogo" required>
               </div>
+              <div class="from-group">
+                <label for="inizio">Data inizio validità</label>
+                  <p class="input-group">
+                    <input type="text" class="form-control" datepicker-popup="dd/MM/yyyy" ng-model="newsCtrl.contenuto.inizio" is-open="opened" close-text="chiudi" />
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                  </p>
+              </div>
+              <div class="form-group">
+                <label for="fine">Data fine validità</label>
+                <p class="input-group">
+                </p>
+              </div>
               <div class="form-group">
                 <label for="testo">Testo</label>
                 <textarea ng-model="newsCtrl.contenuto.testo" rows="5" class="form-control" id="testo" placeholder="Inserisci il testo della news" required></textarea>

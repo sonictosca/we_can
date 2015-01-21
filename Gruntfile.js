@@ -24,6 +24,8 @@ module.exports = function(grunt) {
           './bower_components/bootstrap/dist/js/bootstrap.js',
           './bower_components/components-webfontloader/webfont.js',
           './bower_components/angular/angular.js',
+          './bower_components/angular-i18n/angular-locale_it-it.js',
+          './bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
           './bower_components/ng-file-upload/angular-file-upload-shim.js',
           './bower_components/ng-file-upload/angular-file-upload.js',
           './app/assets/javascript/frontend.js'
@@ -36,6 +38,8 @@ module.exports = function(grunt) {
         './bower_components/bootstrap/dist/js/bootstrap.js',
         './bower_components/components-webfontloader/webfont.js',
         './bower_components/angular/angular.js',
+        './bower_components/angular-i18n/angular-locale_it-it.js',
+        './bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
         './bower_components/ng-file-upload/angular-file-upload-shim.js',
         './bower_components/ng-file-upload/angular-file-upload.js',
         './app/assets/javascript/backend.js'

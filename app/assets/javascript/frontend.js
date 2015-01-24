@@ -37,6 +37,25 @@
     datepickerPopupConfig.clearText = 'Elimina';
   });
 
+  app.directive('navigazione', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'navigazione.html',
+      controller: ['$location', '$log', function($location, $log) {
+        this.attivo = $location.absUrl();
+        var indice = this.attivo.lastIndexOf("/");
+        this.attivo = this.attivo.substr(indice + 1);
+        if (this.attivo === 'index.html') {
+          this.home = true;
+        } else if (this.attivo === 'about.html') {
+          this.about = true;
+        }
+        $log.log(this.attivo);
+      }],
+      controllerAs: 'navCtrl'
+    };
+  });
+
   app.directive('contattoForm', function() {
     return {
       restrict: 'E',

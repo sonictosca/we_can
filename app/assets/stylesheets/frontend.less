@@ -1,8 +1,13 @@
 @import 'base.less';
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   padding-top: 50px;
-  margin-bottom: 60px;
+  margin-bottom: 280px;
 }
 .starter-template {
   padding: 40px 15px;
@@ -11,6 +16,27 @@ body {
 
 a:hover {
   text-decoration: none;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: @col_logo_blue;
+  color: white;
+
+  a:link {
+    color: @col_magenta;
+  }
+
+  a:visited {
+    color: @col_dark_magenta;
+  }
+
+  a:hover {
+    color: @col_dark_magenta;
+  }
+  z-index: 1001;
 }
 
 #welcome {
@@ -101,7 +127,6 @@ a:hover {
   }
 
   .navbar {
-    //padding: 20px 0;
     border-bottom: 0;
     letter-spacing: 1px;
     -webkit-transition: background .5s ease-in-out;
@@ -115,27 +140,48 @@ a:hover {
   align-items: center;
 }
 
-#footer {
-  background: @col_logo_blue;
-  color: white;
-
-  a:link {
-    color: @col_magenta;
-  }
-
-  a:visited {
-    color: @col_dark_magenta;
-  }
-
-  a:hover {
-    color: @col_dark_magenta;
-  }
-}
-
 .ng-invalid.ng-dirty {
   border-color: #FA787E;
 }
 
 .ng-valid.ng-dirty {
   border-color: #78FA89;
+}
+
+.sidebar {
+  display: none;
+}
+
+@media (min-width: 1679px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+  }
+}
+
+.nav-sidebar {
+  margin-right: -21px;
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: -20px;
+}
+
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
 }

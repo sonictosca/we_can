@@ -37,20 +37,63 @@
     datepickerPopupConfig.clearText = 'Elimina';
   });
 
+  app.directive('gsidebar', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'assets/fragment/graphics-side.html',
+      controller: ['$location', function($location) {
+        this.attivo = $location.absUrl();
+        var indice = this.attivo.lastIndexOf('/');
+        this.attivo = this.attivo.substr(indice + 1);
+        switch (this.attivo) {
+          case 'graphic_design.html':
+            this.design = true;
+          break;
+          case 'siti.html':
+            this.siti = true;
+          break;
+          case 'sito_mobile.html':
+            this.mobile = true;
+          break;
+        }
+      }],
+      controllerAs: 'gSideCtrl'
+    };
+  });
+
+  app.directive('fondo', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'assets/fragment/fondo.html'
+    };
+  });
+
   app.directive('navigazione', function() {
     return {
       restrict: 'E',
-      templateUrl: 'navigazione.html',
+      templateUrl: 'assets/fragment/navigazione.html',
       controller: ['$location', '$log', function($location, $log) {
         this.attivo = $location.absUrl();
         var indice = this.attivo.lastIndexOf("/");
         this.attivo = this.attivo.substr(indice + 1);
-        if (this.attivo === 'index.html') {
-          this.home = true;
-        } else if (this.attivo === 'about.html') {
-          this.about = true;
+        switch (this.attivo) {
+          case '':
+          case 'index.html':
+            this.home = true;
+          break;
+          case 'about.html':
+            this.about = true;
+          break;
+          case 'grafica.html':
+          case 'graphic_design.html':
+          case 'siti.html':
+          case 'sito_mobile.html':
+            this.grafica = true;
+          break;
+          case 'other.html':
+            this.other = true;
+          break;
         }
-        $log.log(this.attivo);
       }],
       controllerAs: 'navCtrl'
     };
@@ -59,7 +102,7 @@
   app.directive('contattoForm', function() {
     return {
       restrict: 'E',
-      templateUrl: 'contatto-form.html',
+      templateUrl: 'assets/fragment/contatto-form.html',
       controller: ['$scope', '$log', '$http', function($scope, $log, $http) {
         this.messaggio = {};
         this.successo = false;

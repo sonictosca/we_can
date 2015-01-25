@@ -14,72 +14,12 @@
   <![endif]-->
 </head>
 <body ng-app="weCan">
-  <header role="banner">
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html"><img src="assets/img/LOGO_SMALL.png" id="bar-logo" alt="We Can" width="120" style="opacity: 0;"></a>
-        </div>
-        <div id="navbar" class="container navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Chi Siamo</a></li>
-            <li class="active"><a href="grafica.html">Web & Grafica</a></li>
-            <li><a href="other.html">Altri Servizi</a></li>
-            <li><a href="#">Case Studies</a></li>
-            <li><a href="#">People</a></li>
-            <li><a href="#">Contatti</a></li>
-            <li><a href="#">News</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
+  <navigazione></navigazione>
 
   <section id="description">
     <div class="container">
       <div class="row">
-        <br />
-        <div class="col-md-2 col-xs-4">
-          <ul class="nav nav-pills nav-stacked">
-            <li role="presentation" class="active">
-              <a href="graphic_design.html">Graphic Design</a>
-            </li>
-            <li role="presentation">
-              <a href="siti.html">Realizzazione Siti</a>
-            </li>
-            <li role="presentation">
-              <a href="sito_mobile.html">Siti Mobile e Responsive</a>
-            </li>
-            <li role="presentation">
-              <a href="#">CMS</a>
-            </li>
-            <li role="presentation">
-              <a href="#">E-Commerce</a>
-            </li>
-            <li role="presentation">
-              <a href="#">Posizionamento Siti - SEO</a>
-            </li>
-            <li role="presentation">
-              <a href="#">Google Adwords - SEM</a>
-            </li>
-            <li role="presentation">
-              <a href="#">Social Media Marketing</a>
-            </li>
-            <li role="presentation">
-              <a href=#>Fiere ed Eventi</a>
-            </li>
-            <li role="presentation">
-              <a href="#">Punti Vendita - SHOWROOM</a>
-            </li>
-          </ul>
-        </div>
+        <gsidebar></gsidebar>
         <div class="col-md-6 col-xs-18">
           <div class="starter-template">
             <h1>L'identità e il simbolo del vostro business</h1>
@@ -159,35 +99,8 @@
     </div>
   </section>
 
-  <section id="footer">
-    <div class="container">
-      <div class="row vertical-align">
-        <div class="col-md-6 col-xs-6">
-          <h3>We Can Group snc</h3>
-          <p>di Cappellini Stefano e Sartori Riccardo</p>
-          <br />
-          <p>
-            Via S. Ambrogio, 81<br />
-            22066 Mariano Comense (Co)<br />
-            P.IVA: 03373510134<br />
-          </p>
-          <br />
-          <p>
-            T. +39 031.744823 - F. +39 031.5472135
-          </p>
-          <br />
-          <p>
-            Email: <a href="mailto:info@wecangroup.it">info@wecangroup.it</a>
-          </p>
-        </div>
-        <div class="col-md-6 col-xs-6">
-          <a href="http://www.linkedin.com/company/we-can-group-snc?trk=hb_tab_compy_id_2778986"><i class="fa fa-linkedin-square fa-4x"></i></a>
-          <a href="http://twitter.com/wecangroup_it"><i class="fa fa-twitter-square fa-4x"></i></a>
-          <a href="https://www.facebook.com/wecangroup.it"><i class="fa fa-facebook-square fa-4x"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <fondo></fondo>
+
   <script src="assets/javascript/frontend.js"></script>
   <script src="//localhost:35729/livereload.js"></script>
 </body>

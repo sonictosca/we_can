@@ -112,7 +112,10 @@ module.exports = function(grunt) {
         }
       },
       html: {
-        files: ['./public/*.html'],
+        files: [
+        './public/*.html',
+        './public/assets/fragment/*.html'
+        ],
         options: {
           livereload: 35729
         }

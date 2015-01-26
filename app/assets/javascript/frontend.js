@@ -37,6 +37,13 @@
     datepickerPopupConfig.clearText = 'Elimina';
   });
 
+  app.directive('osidebar', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'assets/fragment/others-side.html'
+    };
+  });
+
   app.directive('gsidebar', function() {
     return {
       restrict: 'E',
@@ -92,6 +99,9 @@
           break;
           case 'other.html':
             this.other = true;
+          break;
+          case 'case_studies.html':
+            this.case = true;
           break;
         }
       }],

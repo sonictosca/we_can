@@ -196,3 +196,61 @@ a:hover {
     padding-left: 40px;
   }
 }
+
+// Sezione d'impatto
+#impact {
+  .hreview {
+    position: relative;
+    padding: 0 10px;
+    border: none;
+  }
+
+  .caption {
+    position: absolute;
+    top: auto;
+    left: 10px;
+    right: 10px;
+    bottom: 0;
+    line-height: 1.1;
+    background: hsla(0,0,10%,0.55);
+    blockquote,
+    .reviewer {
+      margin: 0 6px;
+      padding: 0;
+    }
+  }
+  blockquote {
+    margin-top: 4px;
+    border: none;
+    font-family: @font-family-serif;
+    font-size: @font-size-large;
+    color: #fff;
+
+    .reviewer {
+      margin-top: 2px;
+      margin-bottom: 4px;
+      text-align: right;
+      color: @gray-lighter;
+    }
+  }
+  .review-item-1 .caption {
+    top: 0;
+    right: 10px;
+    left: 62%;
+    bottom: auto;
+    .reviewer {
+      margin-top: 6px;
+      text-align: left;
+    }
+  }
+  .review-item-4 .caption {
+    top: 0;
+    left: 10px;
+    right: 45%;
+    bottom: auto;
+    .reviewer {
+      margin-top: 6px;
+      text-align: left;
+    }
+  }
+}

@@ -62,6 +62,12 @@
           case 'sito_mobile.html':
             this.mobile = true;
           break;
+          case 'cms.html':
+            this.cms = true;
+          break;
+          case 'commerce.html':
+            this.commerce = true;
+          break;
         }
       }],
       controllerAs: 'gSideCtrl'

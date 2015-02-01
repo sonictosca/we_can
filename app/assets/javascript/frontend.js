@@ -40,7 +40,42 @@
   app.directive('osidebar', function() {
     return {
       restrict: 'E',
-      templateUrl: 'assets/fragment/others-side.html'
+      templateUrl: 'assets/fragment/others-side.html',
+      controller: ['$location', function($location) {
+        this.attivo = $location.absUrl();
+        var indice = this.attivo.lastIndexOf('/');
+        this.attivo = this.attivo.substr(indice + 1);
+        switch (this.attivo) {
+          case 'saas.html':
+            this.saas = true;
+          break;
+          case 'personalizzato.html':
+            this.personalizzato = true;
+          break;
+          case 'hardware.html':
+            this.hardware = true;
+          break;
+          case 'networking.html':
+            this.networking = true;
+          break;
+          case 'locazione.html':
+            this.locazione = true;
+          break;
+          case 'interpretariato.html':
+            this.interpretariato = true;
+          break;
+          case 'traduzioni.html':
+            this.traduzioni = true;
+          break;
+          case 'fidelizzazione.html':
+            this.fidelizzazione = true;
+          break;
+          case 'estetici.html':
+            this.estetici = true;
+          break;
+        }
+      }],
+      controllerAs: 'oSideCtrl'
     };
   });
 
@@ -73,6 +108,15 @@
           break;
           case 'sem.html':
             this.sem = true;
+          break;
+          case 'social_media.html':
+            this.social = true;
+          break;
+          case 'fiere.html':
+            this.fiere = true;
+          break;
+          case 'punti_vendita.html':
+            this.punti = true;
           break;
         }
       }],
@@ -107,9 +151,25 @@
           case 'graphic_design.html':
           case 'siti.html':
           case 'sito_mobile.html':
+          case 'cms.html':
+          case 'commerce.html':
+          case 'seo.html':
+          case 'sem.html':
+          case 'social_media.html':
+          case 'fiere.html':
+          case 'punti_vendita.html':
             this.grafica = true;
           break;
           case 'other.html':
+          case 'saas.html':
+          case 'personalizzato.html':
+          case 'hardware.html':
+          case 'networking.html':
+          case 'locazione.html':
+          case 'interpretariato.html':
+          case 'traduzioni.html':
+          case 'fidelizzazione.html':
+          case 'estetici.html':
             this.other = true;
           break;
           case 'case_studies.html':

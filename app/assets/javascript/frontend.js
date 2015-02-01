@@ -68,6 +68,12 @@
           case 'commerce.html':
             this.commerce = true;
           break;
+          case 'seo.html':
+            this.seo = true;
+          break;
+          case 'sem.html':
+            this.sem = true;
+          break;
         }
       }],
       controllerAs: 'gSideCtrl'

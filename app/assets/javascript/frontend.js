@@ -160,7 +160,7 @@
           case 'punti_vendita.html':
             this.grafica = true;
           break;
-          case 'other.html':
+          case 'itc_service.html':
           case 'saas.html':
           case 'personalizzato.html':
           case 'hardware.html':
@@ -170,7 +170,7 @@
           case 'traduzioni.html':
           case 'fidelizzazione.html':
           case 'estetici.html':
-            this.other = true;
+            this.service = true;
           break;
           case 'case_studies.html':
             this.case = true;

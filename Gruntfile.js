@@ -5,7 +5,7 @@ module.exports = function(grunt) {
       all: {
         options: {
           port: 9000,
-          hostname: "localhost", // usare 0.0.0.0 per renderlo accessibilia anche dall'esterno
+          hostname: "0.0.0.0", // usare 0.0.0.0 per renderlo accessibilia anche dall'esterno
         }
       }
     },

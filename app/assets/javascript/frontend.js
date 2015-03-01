@@ -30,13 +30,13 @@
     }
   });
 
-  var app = angular.module('weCan', ['ui.bootstrap', 'angularFileUpload']);
-
+  var app = angular.module('weCan', []);
+/*
   app.config(function(datepickerPopupConfig) {
     datepickerPopupConfig.currentText = 'Oggi';
     datepickerPopupConfig.clearText = 'Elimina';
   });
-
+*/
   app.directive('osidebar', function() {
     return {
       restrict: 'E',
@@ -211,7 +211,7 @@
       controllerAs: 'contattoCtrl'
     };
   });
-
+/*
   app.controller('NewsController', ['$scope', '$log', '$upload', function($scope, $log, $upload) {
 
     $scope.open = function($event) {
@@ -236,5 +236,6 @@
       });
     };
   }]);
+  */
 
 })();

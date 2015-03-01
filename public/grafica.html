@@ -13,13 +13,86 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body ng-app="weCan">
+<body ng-app="weCan" data-spy="scroll" data-target="#affix-nav">
   <navigazione></navigazione>
+
+  <!-- Carousel with multiple images -->
+  <section id="intro">
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active graph-1">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Web Design e Sviluppo</h1>
+            </div>
+          </div>
+        </div>
+        <div class="item graph-2">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Lasciati trovare&hellip;<br />dai motori di ricerca!</h1>
+            </div>
+          </div>
+        </div>
+        <div class="item graph-3">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Brand Identity</h1>
+            </div>
+          </div>
+        </div>
+        <div class="item graph-4">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>E-Commerce</h1>
+            </div>
+          </div>
+        </div>
+        <div class="item graph-5">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Social Media Marketing</h1>
+            </div>
+          </div>
+        </div>
+        <div class="item graph-6">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Foto & Video</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
 
   <section id="description">
     <div class="container">
+      <nav id="affix-nav" class="sidebar col-md-4">
+        <ul class="nav sidenav" data-spy="affix" data-offset-top="10">
+          <li class="active"><a href="#webGrafica">Web & Grafica</a></li>
+        </ul>
+      </nav>
       <div class="row">
-        <div class="starter-template col-sm-8">
+        <div class="starter-template col-md-8">
           <h1>WEB & GRAFICA</h1>
           <p>
             La comincazione non è soltanto un processo di trasmissione delle informazioni.
@@ -48,13 +121,11 @@
             campagne pubblicitarie, campagne promozionali, viral marketing, blog, interazione con i social network.)
           </p>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4 hidden-sm hidden-xs">
           <br />
           <contatto-form></contatto-form>
         </div>
-      </div>
-      <div class="row">
-        <div class="starter-template col-sm-8">
+        <div class="starter-template col-md-8">
           <h1>L'identità e il simbolo del vostro business - Graphic Design</h1>
           <p>
             L'avvento della rete ha portato ad un radicale cambiamento dei metodi
@@ -123,9 +194,7 @@
             controllo qualitativo del prodotto in fase di progettazione alla fase di produzione.
           </p>
         </div>
-      </div>
-      <div class="row">
-        <div class="starter-template col-sm-8">
+        <div class="starter-template col-md-8">
           <h1>Sviluppo siti internet, portali, blog, e-commerce - Realizzazione Siti</h1>
           <p>
             Noi di <strong>We Can Group</strong> pensiamo che un sito web non
@@ -165,9 +234,7 @@
             semplice e del tutto autonoma.
           </p>
         </div>
-      </div>
-      <div class="row">
-        <div class="starter-template col-sm-8">
+        <div class="starter-template col-md-8">
           <h1>Il tuo sito e la tua attività su ogni dispositivo - Siti Mobile</h1>
           <p>
             Il <strong>futuro è mobile</strong>, il web ormai è accessibile e alla
@@ -212,9 +279,7 @@
             azienda mobile ready!
           </p>
         </div>
-      </div>
-      <div class="row">
-        <div class="starter-template col-sm-8">
+        <div class="starter-template col-md-8">
           <h1>
             Realizzazione CMS per siti dinamici. Sviluppo Content Management
             System facili da gestire ed ottimizzati per il SEO - CMS
@@ -276,9 +341,7 @@
             <a href="mailto:info@wecangroup.it">contattaci!</a>
           </p>
         </div>
-      </div>
-      <div class="row">
-        <div class="starter-template col-sm-8">
+        <div class="starter-template col-md-8">
           <h1>Sviluppo piattaforme web professionali per il Commercio Elettronico - E-Commerce</h1>
           <p>
             <em>Vorresti vendere on-line i prodotti o i servizi offerti dalla tua azienda?</em><br />
@@ -348,9 +411,7 @@
             <a href="mailto:info@wecangroup.it">contattaci!</a>
           </p>
         </div>
-      </div>
-      <div class="row">
-        <div class="starter-template col-sm-8">
+        <div class="starter-template col-md-8">
           <h1>Ottimizzazione siti web per il posizionamento nei motori di ricerca - SEO</h1>
           <p>
             <em>
@@ -408,9 +469,7 @@
             </ol>
           </p>
         </div>
-      </div>
-      <div class="row">
-        <div class="starter-template col-sm-8">
+        <div class="starter-template col-md-8">
           <h1>
             Vuoi che il tuo sito web sia visibile sui motori di ricerca
             in breve tempo? Search Engine Marketing - SEM
@@ -531,9 +590,7 @@
             </ol>
           </p>
         </div>
-      </div>
-      <div class="row">
-        <div class="starter-template col-sm-8">
+        <div class="starter-template col-md-8">
           <h1>Pianificazione attività di marketing per la promozione sui social network - Social Media Marketing</h1>
           <p>
             I Social Network sono le <strong>community più diffuse su internet</strong>,
@@ -658,9 +715,7 @@
             </ol>
           </p>
         </div>
-      </div>
-      <div class="row">
-        <div class="starter-template col-sm-8">
+        <div class="starter-template col-md-8">
           <h1>Fiere ed Eventi</h1>
           <p>
             Gli eventi espositivi sono il punto di contatto tra produttore e
@@ -698,9 +753,7 @@
             </ul>
           </p>
         </div>
-      </div>
-      <div class="row">
-        <div class="starter-template col-sm-8">
+        <div class="starter-template col-md-8">
           <h1>Punti Vendita e Showroom</h1>
           <p>
             I layout di punti vendita/showroom influenzano le vendite e l'apprezzamento
@@ -717,6 +770,10 @@
             capaci di cambaire il tradizionale metodo di esposizione dei prodotti: non solo uno spazio
             ma un vero e proprio format innovativo di comunicazione.
           </p>
+        </div>
+        <div class="hidden-md hidden-lg col-sm-12">
+          <br />
+          <contatto-form></contatto-form>
         </div>
       </div>
     </div>

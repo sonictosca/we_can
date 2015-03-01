@@ -79,51 +79,6 @@
     };
   });
 
-  app.directive('gsidebar', function() {
-    return {
-      restrict: 'E',
-      templateUrl: 'assets/fragment/graphics-side.html',
-      controller: ['$location', function($location) {
-        this.attivo = $location.absUrl();
-        var indice = this.attivo.lastIndexOf('/');
-        this.attivo = this.attivo.substr(indice + 1);
-        switch (this.attivo) {
-          case 'graphic_design.html':
-            this.design = true;
-          break;
-          case 'siti.html':
-            this.siti = true;
-          break;
-          case 'sito_mobile.html':
-            this.mobile = true;
-          break;
-          case 'cms.html':
-            this.cms = true;
-          break;
-          case 'commerce.html':
-            this.commerce = true;
-          break;
-          case 'seo.html':
-            this.seo = true;
-          break;
-          case 'sem.html':
-            this.sem = true;
-          break;
-          case 'social_media.html':
-            this.social = true;
-          break;
-          case 'fiere.html':
-            this.fiere = true;
-          break;
-          case 'punti_vendita.html':
-            this.punti = true;
-          break;
-        }
-      }],
-      controllerAs: 'gSideCtrl'
-    };
-  });
-
   app.directive('fondo', function() {
     return {
       restrict: 'E',

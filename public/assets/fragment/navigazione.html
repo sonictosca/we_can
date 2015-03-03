@@ -14,7 +14,14 @@
         <ul class="nav navbar-nav">
           <li ng-class="{active: navCtrl.home}"><a href="index.html">Home</a></li>
           <li ng-class="{active: navCtrl.about}"><a href="about.html">Chi Siamo</a></li>
-          <li ng-class="{active: navCtrl.grafica}"><a href="grafica.html">Web & Grafica</a></li>
+          <!--<li ng-class="{active: navCtrl.grafica}"><a href="grafica.html">Web & Grafica</a></li>-->
+          <li ng-class="{active: navCtrl.grafica}" class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Web & Grafica <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li ng-class="{active: navCtrl.grafica}"><a href="grafica.html">Web & Grafica</a></li>
+              <li><a href="grafica.html#/graphicDesign">Graphic Design</a></li>
+            </ul>
+          </li>
           <li ng-class="{active: navCtrl.service}"><a href="itc_service.html">Servizi IT</a></li>
           <li ng-class="{active: navCtrl.other}"><a href="other.html">Altri Servizi</a></li>
           <li ng-class="{active: navCtrl.case}"><a href="case_studies.html">Case Studies</a></li>

@@ -103,7 +103,6 @@
             this.about = true;
           break;
           case 'grafica.html':
-          case 'graphic_design.html':
           case 'siti.html':
           case 'sito_mobile.html':
           case 'cms.html':
@@ -114,6 +113,12 @@
           case 'fiere.html':
           case 'punti_vendita.html':
             this.grafica = true;
+          break;
+          case 'grafica.html#/graphicDesign':
+            this.grafica = true;
+            $(document.body).animate({
+              'scrollTop':   $('#graphicDesign').offset().top
+            }, 2000);
           break;
           case 'itc_service.html':
           case 'saas.html':
